@@ -31,10 +31,12 @@
     display: flex;
     width: 80%;
     position: absolute;
-    bottom: 180px;
+    bottom: 130px;
     left: 15%;
     z-index: 3;
     color: white; }
+    #carouselExampleFade .row1 p {
+      color: var(--gray-color); }
     #carouselExampleFade .row1 h1 {
       font-weight: 800; }
   #carouselExampleFade .right-text {
@@ -64,6 +66,10 @@
       color: var(--gray-color); }
     .navbar .collapse a:hover {
       color: var(--rose-color); }
+
+.navbar-toggler {
+  color: var(--gray-color);
+  border: none; }
 
 .fa-play {
   color: var(--black-color);
@@ -128,13 +134,18 @@
   -webkit-animation-delay: 0.6s; }
 
 @media only screen and (max-width: 500px) {
+  .intro-banner-vdo-play-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 90px; } }
+@media only screen and (max-width: 900px) {
   .left-text {
     position: absolute;
-    top: -120px; }
+    top: -150px; }
 
   .right-text {
     position: absolute;
-    bottom: 120px;
+    bottom: 160px;
     text-align: left !important; }
     .right-text pre {
       display: none; }
@@ -144,7 +155,16 @@
     content: "More than a\a        hundred successful\a        projects"; }
 
   .line {
-    left: 1px; } }
+    left: 1px; }
+
+  .home-navbar {
+    background-color: var(--black-color); }
+    .home-navbar #navbarNav {
+      background-color: var(--black-color); }
+
+  .container {
+    width: 100%;
+    padding: 0; } }
 /* =================about====================== */
 .about-area {
   width: 70%;
@@ -204,7 +224,14 @@
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
   .nav-background .navbar a {
     color: var(--black-color); }
+  .nav-background #navbarNav {
+    background-color: white; }
 
+@media only screen and (max-width: 500px) {
+  .icon {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red; } }
 /* ===================our works============================ */
 .our-work-area {
   margin-top: 160vh;
@@ -259,7 +286,7 @@
 
 @media only screen and (max-width: 500px) {
   .our-work-area {
-    margin-top: 380vh; }
+    margin-top: 450vh; }
 
   .content1, .content2 {
     margin-top: 10px; }
@@ -267,7 +294,14 @@
   .content2 {
     display: flex;
     flex-direction: column;
-    justify-content: center; } }
+    justify-content: center; }
+    .content2 a {
+      font-size: small;
+      width: 130px; }
+
+  .work {
+    display: block;
+    margin-top: 50px !important; } }
 /* =========================Clients-Says-About-Us================================== */
 .Clients-Says-About-Us {
   min-height: 40vh;
@@ -306,13 +340,50 @@
     display: flex;
     width: 200px; }
 
-/* On smaller screens, decrease text size */
+.banner {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 30px; }
+  .banner img {
+    width: 100%;
+    position: absolute;
+    top: -120px; }
+  .banner .banner-text {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translate(0, -50%);
+    z-index: 3;
+    color: white; }
+    .banner .banner-text .get-start {
+      color: var(--rose-color); }
+    .banner .banner-text h3 {
+      font-weight: 200; }
+    .banner .banner-text p {
+      color: var(--gray-color); }
+    .banner .banner-text .btn {
+      font-size: small;
+      width: 100px !important;
+      background-color: var(--rose-color);
+      border: none; }
+
 @media only screen and (max-width: 300px) {
   .prev, .next, .text {
     font-size: 11px; } }
+@media only screen and (max-width: 500px) {
+  .banner img {
+    height: 500px; }
+
+  .banner-text {
+    width: 200px !important; } }
 /* ==========================Recent-Blog================================= */
 .Recent-Blog {
-  margin-top: 100vh;
+  margin-top: 170vh;
   width: 100%;
   min-height: 140vh;
   height: auto;
@@ -340,7 +411,7 @@
 
 @media only screen and (max-width: 500px) {
   .Recent-Blog {
-    margin-top: 240vh; } }
+    margin-top: 300vh; } }
 /* =================footer================================== */
 .footer {
   width: 100%;
